@@ -456,6 +456,21 @@
             const dateTop = dParts[0] || '';
             const dateBottom = dParts[1] || '';
 
+            let badgeHtml = '<div style="width: 24px;"></div>';
+            if (m.score_home !== '' && m.score_away !== '' && m.score_home !== '-' && m.score_away !== '-') {
+                const sHome = parseInt(m.score_home);
+                const sAway = parseInt(m.score_away);
+                const isMeridaHome = m.home.includes('Mérida');
+                
+                if (sHome === sAway) {
+                    badgeHtml = `<div class="badge badge-e"></div>`;
+                } else if ((isMeridaHome && sHome > sAway) || (!isMeridaHome && sAway > sHome)) {
+                    badgeHtml = `<div class="badge badge-g"></div>`;
+                } else {
+                    badgeHtml = `<div class="badge badge-p"></div>`;
+                }
+            }
+
             return `
             <div class="fs-match-row">
                 <div class="fs-match-date">

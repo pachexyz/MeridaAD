@@ -1,0 +1,68 @@
+{
+  "response": [
+    {
+      "fixture": {
+        "date": "2026-04-05T18:00:00+00:00",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "AD Mérida",
+          "winner": true
+        },
+        "away": {
+          "name": "Alcoyano",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-12T12:00:00+00:00",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "Ibiza",
+          "winner": false
+        },
+        "away": {
+          "name": "AD Mérida",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      }
+    },
+    {
+      "fixture": {
+        "date": "2026-04-19T17:00:00+00:00",
+        "status": {
+          "short": "NS"
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "AD Mérida"
+        },
+        "away": {
+          "name": "Castellón"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    }
+  ]
+}

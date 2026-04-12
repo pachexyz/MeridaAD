@@ -16,7 +16,6 @@ def extract_flashscore_data():
     resultados = []
     partidos = []
     standings = []
-    players = []
     noticias = []
     
     try:
@@ -109,31 +108,7 @@ def extract_flashscore_data():
                     "goalsDiff": diff
                 })
 
-            # 4. Plantilla
-            print(f"Scraping Plantilla...")
-            page.goto(f"{BASE_URL}/plantilla/")
-            page.wait_for_timeout(3000)
-            player_elements = page.query_selector_all('.lineupTable__title, .lineupTable__row')
-            current_pos = "Jugadores"
-            for el in player_elements:
-                class_name = el.get_attribute('class') or ''
-                if 'lineupTable__title' in class_name:
-                    current_pos = el.inner_text().strip()
-                elif 'lineupTable__row' in class_name:
-                    name_el = el.query_selector('.lineupTable__cell--name')
-                    age_el = el.query_selector('.lineupTable__cell--age')
-                    if not name_el: continue
-                    
-                    name = name_el.inner_text().strip()
-                    age = age_el.inner_text().strip() if age_el else ""
-                    if name:
-                        players.append({
-                            "name": name,
-                            "age": age,
-                            "pos": current_pos
-                        })
-
-            # 5. Noticias
+            # 4. Noticias
             print(f"Scraping Noticias...")
             page.goto(f"{BASE_URL}/noticias/")
             page.wait_for_timeout(3000)
@@ -163,7 +138,7 @@ def extract_flashscore_data():
     except Exception as e:
         print(f"Error scraping with Playwright: {e}")
 
-    return resultados, partidos, standings, players, noticias
+    return resultados, partidos, standings, noticias
 
 def main():
     metadata = {
@@ -173,12 +148,11 @@ def main():
     }
 
     print("Starting Flashscore Playwright Extra Scraper...")
-    resultados, partidos, standings, players, noticias = extract_flashscore_data()
+    resultados, partidos, standings, noticias = extract_flashscore_data()
 
     save_json("resultados", {"response": resultados})
     save_json("partidos", {"response": partidos})
     save_json("standings", {"response": [{"league": {"standings": [standings]}}]})
-    save_json("players", {"response": [{"player": p} for p in players]})
     save_json("news", noticias)
     save_json("metadata", metadata)
 

@@ -131,6 +131,12 @@
             border-collapse: collapse;
         }
 
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
         .table-header {
             background-color: var(--bg-hover);
             color: var(--text-secondary);
@@ -315,19 +321,103 @@
             margin-right: 4px;
         }
         
+        
+        /* MOBILE OPTIMIZATIONS */
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                width: 100%;
+                border-radius: 0;
+            }
+            .content {
+                padding: 10px;
+            }
+            .header {
+                padding: 15px;
+            }
+            .header-logo {
+                width: 50px;
+                height: 50px;
+                margin-right: 12px;
+            }
+            .header-title h1 {
+                font-size: 18px;
+                margin: 0;
+            }
+            .header-subtitle {
+                font-size: 11px;
+            }
+            .fs-match-row {
+                padding: 10px 8px;
+            }
+            .fs-match-date {
+                width: 45px;
+                font-size: 10px;
+                margin-right: 8px;
+            }
+            .fs-match-teams {
+                font-size: 12px;
+            }
+            .fs-score {
+                font-size: 12px;
+            }
+            .table-header th, .table-row td {
+                padding: 8px 6px;
+                font-size: 11px;
+            }
+            
+            /* Sticky columns for classification on mobile */
+            .table-responsive table {
+                min-width: 500px; /* Force minimum width to ensure horizontal scroll works as intended */
+            }
+            
+            .table-responsive .date-col:first-child, 
+            .table-responsive .team-name {
+                position: sticky;
+                left: 0;
+                background-color: var(--bg-card);
+                z-index: 2;
+            }
+            
+            .table-responsive .date-col:first-child {
+                width: 30px;
+            }
+            
+            .table-responsive .team-name {
+                left: 30px;
+                box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+            }
+            
+            .table-header th:nth-child(1), .table-header th:nth-child(2) {
+                position: sticky;
+                left: 0;
+                background-color: var(--bg-hover);
+                z-index: 3;
+            }
+            .table-header th:nth-child(2) {
+                left: 30px;
+                box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+            }
+
+            .form-badge {
+                width: 14px;
+                height: 14px;
+                line-height: 14px;
+                font-size: 8px;
+                margin-right: 1px;
+            }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header">
-        <div class="header">
         <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Logo_AD_M%C3%A9rida.svg" alt="Mérida AD Logo" class="header-logo">
         <div class="header-title">
-            <h1 style="margin: 0; font-size: 24px;">AD Mérida</h1>
+            <h1>AD Mérida</h1>
             <div class="header-subtitle">ESPAÑA: Primera Federación - Grupo 2</div>
         </div>
-    </div>
     </div>
 
     <div class="tabs">
@@ -365,21 +455,23 @@
         <!-- CLASIFICACION TAB -->
         <div id="clasificacion" class="tab-content">
             <div class="section-title">Clasificación General</div>
-            <table>
-                <tr class="table-header">
-                    <th width="30">#</th>
-                    <th>EQUIPO</th>
-                    <th width="30" style="text-align: center;">PJ</th>
-                    <th width="30" style="text-align: center;">G</th>
-                    <th width="30" style="text-align: center;">E</th>
-                    <th width="30" style="text-align: center;">P</th>
-                    <th width="50" style="text-align: center;">G</th>
-                    <th width="40" style="text-align: center;">DG</th>
-                    <th width="40" style="text-align: center;">PTS</th>
-                    <th width="130" style="text-align: center;">FORMA</th>
-                </tr>
-                <tbody id="clasificacion-table"></tbody>
-            </table>
+            <div class="table-responsive">
+                <table>
+                    <tr class="table-header">
+                        <th width="30">#</th>
+                        <th>EQUIPO</th>
+                        <th width="30" style="text-align: center;">PJ</th>
+                        <th width="30" style="text-align: center;">G</th>
+                        <th width="30" style="text-align: center;">E</th>
+                        <th width="30" style="text-align: center;">P</th>
+                        <th width="50" style="text-align: center;">G</th>
+                        <th width="40" style="text-align: center;">DG</th>
+                        <th width="40" style="text-align: center;">PTS</th>
+                        <th width="130" style="text-align: center;">FORMA</th>
+                    </tr>
+                    <tbody id="clasificacion-table"></tbody>
+                </table>
+            </div>
         </div>
         
         <div class="sync-status" id="syncStatus">Sincronizando datos...</div>

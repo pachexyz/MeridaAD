@@ -15,7 +15,6 @@ El propósito de esta plataforma es ofrecer una experiencia de usuario rápida, 
 *   🟢 **Resultados Históricos y en Vivo**
 *   📅 **Próximos Encuentros (Calendario)**
 *   🏆 **Clasificación General (Actualizada)**
-*   📰 **Últimas Noticias (Feed Informativo)**
 
 Todo esto implementando técnicas modernas de orquestación, automatización y desarrollo web de vanguardia.
 
@@ -64,5 +63,3 @@ Este repositorio y todo el material técnico aquí recogido ha sido gestado y pu
 *   El diseño es una aplicación interactiva que prueba aptitudes técnicas en el análisis del DOM dinámico (*Scraping*) y despliegue automático de plataformas.
 *   Todos los nombres propios de asociaciones, entidades, escudos heráldicos futbolísticos, así como la información estadística reflejada, son y pertenecen permanentemente a sus **respectivos y legales dueños / instituciones empresariales**, recayendo la autoría únicamente a ellos.
 
----
-*Diseñado con pasión técnica. Bienvenido a ‘El Camino de la Ilusión’. Elige tu lugar en la historia.* 🏛️⚽

@@ -547,13 +547,40 @@
         element.classList.add('active');
     }
 
+    const LOGO_MAP = {
+        // --- Grupo 2 Primera Federación ---
+        'tenerife':            'tenerife',
+        'celta de vigo b':     'celta-de-vigo-b',
+        'real madrid b':       'real-madrid-b',
+        'zamora':              'zamora',
+        'pontevedra':          'pontevedra',
+        'barakaldo':           'barakaldo',
+        'ponferradina':        'ponferradina',
+        'unionistas':          'unionistas',
+        'lugo':                'lugo',
+        'ad merida':           'ad-merida',
+        'ad mérida':           'ad-merida',
+        'merida':              'ad-merida',
+        'mérida':              'ad-merida',
+        'arenas getxo':        'arenas-getxo',
+        'athletic club b':     'athletic-club-b',
+        'racing club ferrol':  'racing-club-ferrol',
+        'real aviles':         'real-aviles',
+        'real avilés':         'real-aviles',
+        'ourense cf':          'ourense-cf',
+        'cf talavera':         'cf-talavera',
+        'guadalajara':         'guadalajara',
+        'cacereno':            'cacereno',
+        'cacereño':            'cacereno',
+        'osasuna b':           'osasuna-b',
+        'arenteiro':           'arenteiro',
+    };
+
     function getTeamLogo(name) {
         if (!name) return '';
-        const slug = name.toLowerCase()
-            .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-            .replace(/\s+/g, '-')
-            .replace(/[^a-z0-9-]/g, '');
-        return `assets/logos/${slug}.png`;
+        const key = name.trim().toLowerCase();
+        const slug = LOGO_MAP[key];
+        return slug ? `assets/logos/${slug}.png` : '';
     }
 
     async function loadData() {

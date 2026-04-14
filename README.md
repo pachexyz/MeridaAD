@@ -7,6 +7,8 @@ Bienvenido al repositorio central de **AD Mérida | Información**, un dashboard
 
 Este proyecto genera estáticamente su propio motor de información, emulando la interfaz y la utilidad de aplicaciones deportivas de primer nivel de manera completamente automatizada.
 
+Este proyecto forma parte del ecosistema de servicios locales [**Mérida XYZ**](https://meridaxyz.wordpress.com/).
+
 ---
 
 ## 🎯 Objetivo del Proyecto

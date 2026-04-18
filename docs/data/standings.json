@@ -151,8 +151,32 @@
             {
               "rank": 7,
               "team": {
-                "name": "Ponferradina",
+                "name": "Unionistas",
                 "id": 7
+              },
+              "points": 48,
+              "stats": {
+                "pj": "33",
+                "g": "13",
+                "e": "9",
+                "p": "11",
+                "goals": "45:42",
+                "diff": "3"
+              },
+              "form": [
+                "?",
+                "G",
+                "G",
+                "G",
+                "P",
+                "P"
+              ]
+            },
+            {
+              "rank": 8,
+              "team": {
+                "name": "Ponferradina",
+                "id": 8
               },
               "points": 47,
               "stats": {
@@ -170,30 +194,6 @@
                 "E",
                 "G",
                 "E"
-              ]
-            },
-            {
-              "rank": 8,
-              "team": {
-                "name": "Unionistas",
-                "id": 8
-              },
-              "points": 47,
-              "stats": {
-                "pj": "32",
-                "g": "13",
-                "e": "8",
-                "p": "11",
-                "goals": "45:42",
-                "diff": "3"
-              },
-              "form": [
-                "?",
-                "G",
-                "G",
-                "G",
-                "P",
-                "P"
               ]
             },
             {
@@ -322,11 +322,11 @@
                 "name": "Real Avilés",
                 "id": 14
               },
-              "points": 40,
+              "points": 41,
               "stats": {
-                "pj": "32",
+                "pj": "33",
                 "g": "11",
-                "e": "7",
+                "e": "8",
                 "p": "14",
                 "goals": "46:53",
                 "diff": "-7"

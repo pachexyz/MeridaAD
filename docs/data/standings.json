@@ -247,8 +247,32 @@
             {
               "rank": 11,
               "team": {
-                "name": "Arenas Getxo",
+                "name": "Racing Club Ferrol",
                 "id": 11
+              },
+              "points": 45,
+              "stats": {
+                "pj": "33",
+                "g": "13",
+                "e": "6",
+                "p": "14",
+                "goals": "36:41",
+                "diff": "-5"
+              },
+              "form": [
+                "?",
+                "P",
+                "P",
+                "P",
+                "E",
+                "E"
+              ]
+            },
+            {
+              "rank": 12,
+              "team": {
+                "name": "Arenas Getxo",
+                "id": 12
               },
               "points": 44,
               "stats": {
@@ -269,19 +293,19 @@
               ]
             },
             {
-              "rank": 12,
+              "rank": 13,
               "team": {
                 "name": "Athletic Club B",
-                "id": 12
+                "id": 13
               },
               "points": 44,
               "stats": {
-                "pj": "32",
+                "pj": "33",
                 "g": "12",
                 "e": "8",
-                "p": "12",
-                "goals": "33:36",
-                "diff": "-3"
+                "p": "13",
+                "goals": "33:37",
+                "diff": "-4"
               },
               "form": [
                 "?",
@@ -290,30 +314,6 @@
                 "P",
                 "E",
                 "G"
-              ]
-            },
-            {
-              "rank": 13,
-              "team": {
-                "name": "Racing Club Ferrol",
-                "id": 13
-              },
-              "points": 42,
-              "stats": {
-                "pj": "32",
-                "g": "12",
-                "e": "6",
-                "p": "14",
-                "goals": "35:41",
-                "diff": "-6"
-              },
-              "form": [
-                "?",
-                "P",
-                "P",
-                "P",
-                "E",
-                "E"
               ]
             },
             {
